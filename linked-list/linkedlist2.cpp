@@ -18,9 +18,9 @@ void push(int val){
 
 //insert an element at required position 
 void insert(int pos,int val){
-    if(pos!=1){
+    if(pos!=0){
         node* k = head;
-        for(int i=0;i<pos-2;i++){
+        for(int i=0;i<pos-1;i++){
             k = k->next;
         }
         node* temp = (node*)malloc(sizeof(node));
@@ -62,6 +62,6 @@ int main(void){
     push(1);
     push(2);
     push(3);
-    insert(1,5);
+    insert(2,5);
     printlist(head);
 }
